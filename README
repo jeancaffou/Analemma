@@ -2,3 +2,6 @@ Here's a class for calculating an approximate time of the sunset, sunrise and da
 It's accurate to about 20 minutes (compared to results from WolframAlpha).
 
 Also, because the constructor Date(int year, int month, int day) is marked as deprecated, GregorianCalendar class is used instead.
+
+Main article:
+http://dev.kafol.net/2012/09/java-calculating-approximate-sunset-and.html
