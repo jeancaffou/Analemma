@@ -159,7 +159,8 @@ public class Analemma {
 	}
 	
 	/*
-	 * Returns 1 if the date is in daylight time or 0 if not
+	 * Returns 1 if the date is in daylight time or 0 if not.
+	 * The time used is noon.
 	 * 
 	 * @param	int		year of the date
 	 * @param	int		month of the date
