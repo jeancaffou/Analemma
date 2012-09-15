@@ -1,0 +1,4 @@
+Here's a class for calculating an approximate time of the sunset, sunrise and day length on a given date, on a given location (latitude coordinate). It takes into account leap years and daylight saving time offset.
+It's accurate to about 20 minutes (compared to results from WolframAlpha).
+
+Also, because the constructor Date(int year, int month, int day) is marked as deprecated, GregorianCalendar class is used instead.
