@@ -4,7 +4,7 @@ import java.util.*;
  * Calculate sunset and sunrise on a given day on a given location
  * 
  * GPL, MIT License
- * 2012, Žan Kafol, Ana Grum
+ * 2012, Å½an Kafol, Ana Grum
  */
 
 public class Analemma {
@@ -119,8 +119,8 @@ public class Analemma {
 		// Calculate the Sun's declination
 		double declination = (cardinal * 23.5 / season);
 		
-		// During a solstice, the maximum axial tilt to the Sun is 23°26'15"
-		// During an equinox, the axial tilt to the Sun is 0°
+		// During a solstice, the maximum axial tilt to the Sun is 23Â°26'15"
+		// During an equinox, the axial tilt to the Sun is 0Â°
 		if (today.after(summerStart) && today.before(autumnStart) || today.before(springStart) || today.after(winterStart)) {
 			declination = 23.5 - declination;
 		}
