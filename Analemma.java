@@ -8,6 +8,8 @@ import java.util.*;
  */
 
 public class Analemma {
+	// Maximum axial tilt is 23°26'15"
+	public static double MAX_DECLINATION = 23 + 26/60 + 15/3600;
 	
 	/*
 	 * Test - print out sunset for all days in this year
@@ -117,17 +119,17 @@ public class Analemma {
 		}
 		
 		// Calculate the Sun's declination
-		double declination = (cardinal * 23.5 / season);
+		double declination = (cardinal * MAX_DECLINATION / season);
 		
 		// During a solstice, the maximum axial tilt to the Sun is 23°26'15"
 		// During an equinox, the axial tilt to the Sun is 0°
 		if (today.after(summerStart) && today.before(autumnStart) || today.before(springStart) || today.after(winterStart)) {
-			declination = 23.5 - declination;
+			declination = MAX_DECLINATION - declination;
 		}
 		
 		// Summer and winter solstice
 		if (declination == 0 && !(today.equals(springStart) || today.equals(autumnStart))) {
-			declination = 23.5;
+			declination = MAX_DECLINATION;
 		}
 		
 		// Use a negative declination between the summer's and next winter solstice
